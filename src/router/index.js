@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import IndexView from '../views/IndexView.vue'
-import Evaluate from '../views/EvaluateView.vue'
+import EvaluateInstructor from '../views/EvaluateInstructor.vue'
 import Profile from '../views/ProfileView.vue'
 import Ranking from '../views/RankingView.vue'
+import ForgotPassword from '../views/ResetPasswordView.vue'
 
 const routes = [
   {
@@ -17,9 +18,9 @@ const routes = [
     component: IndexView
   },
   {
-    path: '/evaluate',
+    path: '/evaluateInstructor',
     name: 'evaluate',
-    component: Evaluate
+    component: EvaluateInstructor
   },
   {
     path: '/ranking',
@@ -31,6 +32,11 @@ const routes = [
     name: 'profile',
     component: Profile
   },
+  {
+    path: '/fpassword',
+    name: 'forgotpassword',
+    component: ForgotPassword
+  }
 ]
 
 

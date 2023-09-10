@@ -1,12 +1,12 @@
 <script>
 import Sidebar from '../components/Sidebar-component.vue'
-import Instructors from '../components/Instructors-component.vue'
+import EvaluateInstructor from '../components/EvaluateInstructor.vue'
 
 export default {
   name: "Sidebar-component",
   components: {
     Sidebar,
-    Instructors,
+    EvaluateInstructor,
   },
 };
 </script>
@@ -17,11 +17,12 @@ export default {
         <div class="flex flex-col">
           <div class="flex flex-col bg-sky-900">
             <div class="flex flex-row space-x-3">
-              <span class="font-bold text-white p-1 text-[30px]">Instructors</span>
-            </div>      
-            <span class="text-white p-1 text-[12px]">Year 2023 | Year 2024</span>         
+              <span class="font-bold text-white p-1 text-[30px]">Evaluate Instructor</span>
+            </div>  
+            <span class="text-white p-1 text-[12px]">1st Semester</span>    
+            <!-- <span class="text-white p-1 text-[12px]">Year 2023 | Year 2024</span> -->
           </div>
-            <Instructors></Instructors>
+        <EvaluateInstructor></EvaluateInstructor>
         </div>
       </div>
     </div>
