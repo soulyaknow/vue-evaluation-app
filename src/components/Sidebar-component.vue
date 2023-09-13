@@ -6,8 +6,9 @@ export default{
             }
         },
         methods: {
-            profile(){
+            settings(){
                 document.querySelector("#profile").style.display = "block";
+                document.querySelector("#reset").style.display = "block";
                 document.querySelector("#submenu").classList.toggle('hidden');
             },
             eval(){
@@ -78,7 +79,7 @@ export default{
             
             <hr class="my-4 text-gray-600">
 
-            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-white hover:bg-blue-600" @click="profile">
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-white hover:bg-blue-600" @click="settings">
                 <i class="bi bi-gear-fill"></i>
                 <div class="flex justify-between w-full items-center">
                     <span class="text-[15px] ml-4 text-gray-200">Settings</span>
@@ -92,10 +93,13 @@ export default{
                 <router-link to='/profile'>          
                 <h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1 hidden" id="profile"><i class="bi bi-person-circle pr-2"></i>Profile</h1>
                 </router-link>
+                <router-link to="/fpassword">
+                <h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1 hidden" id="reset"><i class="bi bi-key-fill pr-2"></i>Reset Password</h1>
+                </router-link>
             </div>
 
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-white hover:bg-blue-600">
-                <router-link to='/logout'>
+                <router-link to='/'>
                 <i class="bi bi-box-arrow-right"></i>
                 <span class="text-[15px] ml-4 text-gray-200">Logout</span>
                 </router-link>

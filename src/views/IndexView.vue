@@ -1,9 +1,34 @@
-<script>
+ <script>
 import Sidebar from '../components/Sidebar-component.vue'
 import Instructors from '../components/Instructors-component.vue'
+import axios from 'axios'
 
 export default {
-  name: "Sidebar-component",
+  name: "Home-component",
+  data() {
+    return {
+      user: null,
+      instructors: [
+        {
+          Name: 'Sophia Espiritu',
+          Department: 'BSIT'
+        },
+        {
+          Name: 'Dariane Sureta',
+          Department: 'BEED'
+        },
+        {
+          Name: 'Ann Sarmiento',
+          Department: 'BSHM'
+        }
+      ],
+    } 
+  },
+  async created(){
+    const response = await axios.get('user');
+    
+    this.user = response.data;
+  },
   components: {
     Sidebar,
     Instructors,
@@ -21,7 +46,8 @@ export default {
             </div>      
             <span class="text-white p-1 text-[12px]">Year 2023 | Year 2024</span>         
           </div>
-            <Instructors></Instructors>
+          <!-- Pass the instructor data as a prop -->
+            <Instructors :instructors="instructors"></Instructors>
         </div>
       </div>
     </div>

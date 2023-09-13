@@ -3,6 +3,24 @@ import Sidebar from '../components/Sidebar-component.vue'
 import EvaluateInstructor from '../components/EvaluateInstructor.vue'
 
 export default {
+  data() {
+    return {
+      instructors: [
+        {
+          Name: 'Sophia Espiritu',
+          Department: 'BSIT'
+        },
+        {
+          Name: 'Dariane Sureta',
+          Department: 'BEED'
+        },
+        {
+          Name: 'Ann Sarmiento',
+          Department: 'BSHM'
+        }
+      ],
+    } 
+  },
   name: "Sidebar-component",
   components: {
     Sidebar,
@@ -22,7 +40,7 @@ export default {
             <span class="text-white p-1 text-[12px]">1st Semester</span>    
             <!-- <span class="text-white p-1 text-[12px]">Year 2023 | Year 2024</span> -->
           </div>
-        <EvaluateInstructor></EvaluateInstructor>
+        <EvaluateInstructor :instructors="instructors"></EvaluateInstructor>
         </div>
       </div>
     </div>
